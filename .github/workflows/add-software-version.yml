@@ -1,0 +1,41 @@
+name: add-software-version
+
+on:
+  workflow_dispatch:
+    inputs:
+      softwareName:
+        description: 'software name'
+        required: true
+        type: string
+      command:
+        description: 'command name'
+        required: true
+        type: string
+      commandVersion:
+        description: 'command for software version'
+        required: true
+        type: string
+
+jobs:
+  genshin-impact-wish:
+    runs-on: ubuntu-latest
+    env:
+      TZ: Asia/Shanghai
+    steps:
+    - name: Checkout source
+      uses: actions/checkout@v3
+      with:
+        submodules: true
+    - name: Setup Python 3.9
+      uses: actions/setup-python@v3.1.2
+      with:
+        python-version: 3.9
+    - name: Run add_software_version.py
+      env:
+        GIT_NAME: ${{ secrets.GIT_NAME }}
+        GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
+        softwareName: ${{ inputs.softwareName }}
+        command: ${{ inputs.command }}
+        commandVersion: ${{ inputs.commandVersion }}
+      run: |
+        python3 add_software_version.py

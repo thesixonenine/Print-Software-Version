@@ -1,0 +1,9 @@
+PowerShell,pwsh,pwsh -Version
+Git,git,git --version
+Java,java,java -version
+Go,go,go version
+Maven,mvn,mvn -v
+Gradle,gradle,gradle -v
+Node,node,node -v
+NPM,npm,npm -v
+GCC,gcc,gcc --version
