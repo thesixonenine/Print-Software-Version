@@ -9,3 +9,4 @@ NPM,npm,npm -v
 GCC,gcc,gcc --version
 Aria2,aria2c,aria2c -v
 Python,python,python -V
+oh-my-posh,oh-my-posh,oh-my-posh version
