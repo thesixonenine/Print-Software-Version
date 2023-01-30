@@ -17,7 +17,7 @@ on:
         type: string
 
 jobs:
-  genshin-impact-wish:
+  add-software-version:
     runs-on: ubuntu-latest
     env:
       TZ: Asia/Shanghai
@@ -39,3 +39,4 @@ jobs:
         commandVersion: ${{ inputs.commandVersion }}
       run: |
         python3 add_software_version.py
+
