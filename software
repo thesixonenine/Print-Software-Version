@@ -7,3 +7,4 @@ Gradle,gradle,gradle -v
 Node,node,node -v
 NPM,npm,npm -v
 GCC,gcc,gcc --version
+Aria2,aria2c,aria2c -v
