@@ -32,6 +32,7 @@ jobs:
         python-version: 3.9
     - name: Run add_software_version.py
       env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
         GIT_NAME: ${{ secrets.GIT_NAME }}
         GIT_EMAIL: ${{ secrets.GIT_EMAIL }}
         softwareName: ${{ inputs.softwareName }}
