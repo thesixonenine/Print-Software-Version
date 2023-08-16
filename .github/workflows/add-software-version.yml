@@ -38,5 +38,5 @@ jobs:
         command: ${{ inputs.command }}
         commandVersion: ${{ inputs.commandVersion }}
       run: |
-        python3 add_software_version.py
+        awk -F',' -v comm="$command" '$2==comm {found=1; print $1, "exits!"; exit} END {if (!found) {print "add", comm; system("python3 add_software_version.py")}}' "software"
 
